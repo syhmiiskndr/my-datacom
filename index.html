@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteNexus Cyber Café - Business Proposal & Network Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-wifi"></i>
+                <span>ByteNexus</span>
+            </div>
+            <nav>
+                <a href="#business">Business</a>
+                <a href="#hardware">Hardware</a>
+                <a href="#topology">Topology</a>
+                <a href="#ip">IP Scheme</a>
+                <a href="#internet">Internet</a>
+                <a href="#conclusion">Conclusion</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>ByteNexus Cyber Café</h1>
+            <p>A Modern Digital Hub for Gaming, Productivity & Community</p>
+            <div>
+                <span class="badge"><i class="fas fa-map-marker-alt"></i> Durian Tunggal, Malacca</span>
+                <span class="badge"><i class="fas fa-ruler"></i> 15' × 25' (375 sq. ft.)</span>
+                <span class="badge"><i class="fas fa-database"></i> 13 Workstations</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- 1. Business Introduction -->
+        <section id="business">
+            <h2><i class="fas fa-briefcase"></i> 1. Business Introduction</h2>
+
+            <h3>1.1 The Business</h3>
+            <p>ByteNexus Cyber Café is a modern, high-performance digital hub strategically designed to bridge the gap between competitive gaming, casual browsing, and academic productivity. Operating from a single 15' × 25' (375 sq. ft.) commercial shop lot, the café provides:</p>
+            <ul class="feature-list">
+                <li>High-speed fiber internet access (800 Mbps)</li>
+                <li>Premium gaming stations with RTX 4050 graphics</li>
+                <li>Essential network services (printing, scanning, file sharing)</li>
+                <li>Professional workspace for remote workers</li>
+                <li>Comfortable, community-driven environment</li>
+            </ul>
+
+            <h3>1.2 Location</h3>
+            <p>The café is strategically located in <span class="highlight">Durian Tunggal, Malacca</span>, positioned directly near student residential zones and commercial areas. The compact 15' × 25' footprint is optimally designed to maximize workstation density while maintaining strict compliance with local safety and ventilation standards. Proximity to university campuses ensures consistent customer traffic from the primary demographic.</p>
+
+            <h3>1.3 Target Market</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>University Students</h4>
+                    <p>Primary demographic requiring stable, low-latency connections for online assessments, collaborative group projects, and multiplayer gaming.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-gamepad"></i>
+                    <h4>Esports Enthusiasts</h4>
+                    <p>Individuals seeking high-end hardware capable of running modern AAA and esports titles smoothly with sub-15ms latency.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>Remote Workers & Freelancers</h4>
+                    <p>Professionals needing temporary workspace with reliable internet, printing facilities, and a professional environment.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-users"></i>
+                    <h4>Casual Gamers</h4>
+                    <p>Individuals looking for a social gaming environment with powerful systems and community atmosphere.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Hardware & Software -->
+        <section id="hardware">
+            <h2><i class="fas fa-server"></i> 2. Proposed Hardware & Software</h2>
+
+            <h3>2.1 Hardware Requirements</h3>
+            <p>To support an infrastructure of 12 Client Gaming Stations and 1 Admin/Cashier Station, the following enterprise-grade hardware is selected for reliability, performance, and long-term scalability:</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Item Description</th>
+                            <th>Qty</th>
+                            <th>Unit Price (RM)</th>
+                            <th>Total Price (RM)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Client PC Station (Ryzen 5, 16GB RAM, RTX 4050, 24" 144Hz Monitor)</td>
+                            <td>12</td>
+                            <td class="price">3,500.00</td>
+                            <td class="price">42,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Admin/Server PC (Core i5, 16GB RAM, Integrated Graphics, Dual NIC)</td>
+                            <td>1</td>
+                            <td class="price">2,500.00</td>
+                            <td class="price">2,500.00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Router & Firewall (Ubiquiti EdgeRouter 4)</td>
+                            <td>1</td>
+                            <td class="price">950.00</td>
+                            <td class="price">950.00</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Core Switch (Cisco Catalyst 2960-Plus 24-Port Fast/Gigabit Ethernet)</td>
+                            <td>1</td>
+                            <td class="price">1,200.00</td>
+                            <td class="price">1,200.00</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Wireless Access Point (TP-Link Omada EAP225 for customer Wi-Fi)</td>
+                            <td>1</td>
+                            <td class="price">350.00</td>
+                            <td class="price">350.00</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Network Cabling & Accessories (Cat6 UTP Cable 305m roll, RJ45, Faceplates)</td>
+                            <td>1</td>
+                            <td class="price">600.00</td>
+                            <td class="price">600.00</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Network Server Rack & Patch Panel (9U Wallmount Rack + 24-Port Patch Panel)</td>
+                            <td>1</td>
+                            <td class="price">550.00</td>
+                            <td class="price">550.00</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Network Printer/Scanner (Brother DCPL2540DW Laser Printer)</td>
+                            <td>1</td>
+                            <td class="price">850.00</td>
+                            <td class="price">850.00</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Uninterruptible Power Supply (ProLink 1200VA for Network Rack & Admin)</td>
+                            <td>2</td>
+                            <td class="price">400.00</td>
+                            <td class="price">800.00</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Miscellaneous (Shop Lot Renovation, Air Conditioning, Desks, Ergonomic Chairs)</td>
+                            <td>—</td>
+                            <td class="price">—</td>
+                            <td class="price">15,000.00</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="4">TOTAL ESTIMATED STARTUP COST</td>
+                            <td class="price">RM 64,800.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>2.2 Software Requirements</h3>
+            <div class="justification-box">
+                <h4><i class="fas fa-check"></i> Operating Systems</h4>
+                <p><strong>Windows 11 Home/Pro</strong> (OEM licenses included with hardware) — Ensures compatibility with gaming software and professional applications.</p>
+            </div>
+
+            <div class="justification-box">
+                <h4><i class="fas fa-check"></i> Cyber Café Management Software</h4>
+                <p><strong>CyberCafepro or Gizmo</strong> — Provides session timing, remote client locking, billing automation, sales reporting, and inventory management.</p>
+            </div>
+
+            <div class="justification-box">
+                <h4><i class="fas fa-check"></i> Network Security & Utilities</h4>
+                <p><strong>Built-in Windows Defender + Squidx/PfSense-based URL filtering</strong> on the router to block malicious domains, phishing sites, and inappropriate content. Ensures safe, productive network environment.</p>
+            </div>
+        </section>
+
+        <!-- 3. Network Topology & Design -->
+        <section id="topology">
+            <h2><i class="fas fa-network-wired"></i> 3. Proposed Network Topology & Design</h2>
+
+            <h3>3.1 Topology Overview</h3>
+            <p>The network utilizes a <span class="highlight">Physical and Logical Star Topology</span>. Every single device (Client PCs, Admin PC, Printer, Access Point, Server) connects via an individual point-to-point cable back to a centralized Cisco 24-Port Switch serving as the single point of distribution.</p>
+
+            <div class="network-diagram">
+                <div>
+                    <div class="network-box">12 Gaming Client PCs</div>
+                    <div class="network-box">Admin/Cashier PC</div>
+                    <div class="network-box">Network Printer</div>
+                    <div class="network-box">Wireless AP</div>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="network-box" style="width: 100%; max-width: 400px;">Cisco Catalyst 2960-Plus (24-Port Switch)</div>
+                <div class="arrow">↓</div>
+                <div class="network-box" style="width: 100%; max-width: 400px;">Ubiquiti EdgeRouter 4 (Gateway & Firewall)</div>
+                <div class="arrow">↓</div>
+                <div class="network-box" style="width: 100%; max-width: 400px;">Unifi Business Fibre 800Mbps (Internet)</div>
+            </div>
+
+            <h3>3.2 Topology Justification</h3>
+            <p>Star topology ensures that if a single Cat6 cable or client network interface card fails, <strong>only that specific station goes offline</strong>. The rest of the cyber café remains completely operational, minimizing business downtime and simplifying troubleshooting. This is critical for a commercial operation where reliability directly impacts revenue and customer satisfaction.</p>
+
+            <h3>3.3 Networking Devices</h3>
+            <div class="two-column">
+                <div>
+                    <h4 style="color: #2563eb; margin-bottom: 1rem;">Gateway Router</h4>
+                    <p><strong>Model:</strong> Ubiquiti EdgeRouter 4</p>
+                    <p><strong>Functions:</strong></p>
+                    <ul style="margin: 0.5rem 0 0 2rem;">
+                        <li>Network Address Translation (NAT)</li>
+                        <li>DHCP IP distribution</li>
+                        <li>Firewall rules & security policies</li>
+                        <li>VPN capabilities for remote management</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #2563eb; margin-bottom: 1rem;">Central Switch</h4>
+                    <p><strong>Model:</strong> Cisco Catalyst 2960-Plus (24-Port)</p>
+                    <p><strong>Functions:</strong></p>
+                    <ul style="margin: 0.5rem 0 0 2rem;">
+                        <li>Central LAN distribution node</li>
+                        <li>Line-rate data switching</li>
+                        <li>VLAN support for traffic segmentation</li>
+                        <li>Managed switch for QoS control</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>3.4 Wireless Access Point</h3>
+            <div class="justification-box">
+                <h4><i class="fas fa-wifi"></i> TP-Link Omada EAP225 (802.11ac Wi-Fi 5)</h4>
+                <p>Provides wireless connectivity for mobile devices belonging to waiting customers and staff. Ceiling-mounted placement ensures optimal coverage throughout the 375 sq. ft. space with minimal dead zones. Dual-band (2.4GHz + 5GHz) operation accommodates diverse devices and optimizes bandwidth allocation.</p>
+            </div>
+
+            <h3>3.5 Communication Media</h3>
+            <div class="two-column">
+                <div class="card">
+                    <i class="fas fa-cable"></i>
+                    <h4>Wired Media</h4>
+                    <p><strong>Category 6 (Cat6) Unshielded Twisted Pair (UTP) cables</strong> are used for all fixed assets (PCs, Printer, Server). Cat6 easily supports data transfer speeds up to 1 Gbps at 100 meters, mitigates crosstalk, and provides optimal ping latency (< 5ms) for gaming applications.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <h4>Wireless Media</h4>
+                    <p><strong>IEEE 802.11ac (Wi-Fi 5/6)</strong> broadcasted via the ceiling-mounted Access Point specifically for mobile devices belonging to waiting customers. Provides flexible connectivity without permanent cabling requirements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. IP Addressing -->
+        <section id="ip">
+            <h2><i class="fas fa-network-wired"></i> 4. IP Addressing Scheme</h2>
+
+            <h3>4.1 IP Configuration Overview</h3>
+            <p>To ensure an organized and maintainable network, a <span class="highlight">Class C Private IP Address scheme</span> is implemented using VLSM (Variable Length Subnet Masking) to segment management traffic from general customer traffic.</p>
+
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-label">Network Address</div>
+                    <div class="spec-value">192.168.10.0/24</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Subnet Mask</div>
+                    <div class="spec-value">255.255.255.0</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Total Usable Hosts</div>
+                    <div class="spec-value">254</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Gateway</div>
+                    <div class="spec-value">192.168.10.1</div>
+                </div>
+            </div>
+
+            <h3>4.2 IP Address Allocation Table</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Device Name(s)</th>
+                            <th>IP Address Range</th>
+                            <th>Subnet Mask</th>
+                            <th>Gateway</th>
+                            <th>Assignment Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Gateway Router</strong></td>
+                            <td>192.168.10.1</td>
+                            <td>255.255.255.0</td>
+                            <td>N/A</td>
+                            <td>Static</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Network Switch</strong></td>
+                            <td>192.168.10.2</td>
+                            <td>255.255.255.0</td>
+                            <td>192.168.10.1</td>
+                            <td>Static</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Admin / Cashier PC</strong></td>
+                            <td>192.168.10.10</td>
+                            <td>255.255.255.0</td>
+                            <td>192.168.10.1</td>
+                            <td>Static</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Network Printer</strong></td>
+                            <td>192.168.10.15</td>
+                            <td>255.255.255.0</td>
+                            <td>192.168.10.1</td>
+                            <td>Static</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wireless AP</strong></td>
+                            <td>192.168.10.20</td>
+                            <td>255.255.255.0</td>
+                            <td>192.168.10.1</td>
+                            <td>Static</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gaming Clients (1-12)</strong></td>
+                            <td>192.168.10.31 to 192.168.10.42</td>
+                            <td>255.255.255.0</td>
+                            <td>192.168.10.1</td>
+                            <td>Reserved DHCP</td>
+                        </tr>
+                        <tr style="background-color: #f0f9ff;">
+                            <td><strong>Customer Wi-Fi Pool</strong></td>
+                            <td>192.168.10.100 to 192.168.10.200</td>
+                            <td>255.255.255.0</td>
+                            <td>192.168.10.1</td>
+                            <td>Dynamic DHCP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>4.3 VLSM & Segmentation Strategy</h3>
+            <p><strong>Management Pool (192.168.10.1–192.168.10.30):</strong> Reserved for critical infrastructure and administrative systems. Assigned with static IPs for reliability and easy identification.</p>
+            <p><strong>Gaming Client Pool (192.168.10.31–192.168.10.42):</strong> Reserved DHCP range for the 12 gaming workstations. Reserved DHCP ensures consistency while allowing ease of management through the café management software.</p>
+            <p><strong>Customer Wi-Fi Pool (192.168.10.100–192.168.10.200):</strong> Dynamic DHCP range for guests and customers using mobile devices. Isolated from gaming infrastructure to prevent interference and ensure optimal bandwidth allocation for paying gaming customers.</p>
+        </section>
+
+        <!-- 5. Internet Access -->
+        <section id="internet">
+            <h2><i class="fas fa-globe"></i> 5. Types of Internet Access</h2>
+
+            <h3>5.1 Selected Internet Service</h3>
+            <p>For an enterprise environment dependent on continuous uptime and low ping times, <span class="highlight">Unifi Business Fibre</span> is selected over mobile broadband or legacy copper connections (Streamyx).</p>
+
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-label">Provider</div>
+                    <div class="spec-value">Unifi Business Fibre</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Download Speed</div>
+                    <div class="spec-value">800 Mbps</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Upload Speed</div>
+                    <div class="spec-value">200 Mbps</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Target Latency</div>
+                    <div class="spec-value">&lt; 15 ms</div>
+                </div>
+            </div>
+
+            <h3>5.2 Justification & Analysis</h3>
+            <div class="justification-box">
+                <h4><i class="fas fa-lightbulb"></i> Why Fiber Optic Technology?</h4>
+                <p>Fiber optic infrastructure offers symmetrical/high-speed throughput unaffected by weather conditions or line congestion. Unlike copper-based Streamyx (affected by distance, weather, and congestion), fiber maintains consistent performance.</p>
+            </div>
+
+            <div class="justification-box">
+                <h4><i class="fas fa-gamepad"></i> Performance for Gaming</h4>
+                <p>An 800 Mbps pipe guarantees that even if 4 clients are simultaneously downloading 50GB game patches or streaming 4K content, the remaining 8 gaming clients will experience stable latency under 15ms to local gaming servers. This is crucial for competitive gaming where sub-20ms ping is mandatory.</p>
+            </div>
+
+            <div class="justification-box">
+                <h4><i class="fas fa-shield-alt"></i> Additional Benefits</h4>
+                <p>Includes a Fixed Static IP vital for remote network management, hosting secure local gaming lobbies, and enabling port-forwarding for specialized gaming services. Provides 24/7 technical support suitable for commercial operations.</p>
+            </div>
+
+            <h3>5.3 Comparison with Alternatives</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Unifi Business Fibre (Selected)</th>
+                            <th>Streamyx (ADSL)</th>
+                            <th>Unifi Mobile</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Download Speed</strong></td>
+                            <td class="price">800 Mbps</td>
+                            <td>20–50 Mbps</td>
+                            <td>100–300 Mbps</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stability</strong></td>
+                            <td class="price">Excellent (Fixed Line)</td>
+                            <td>Poor (Weather dependent)</td>
+                            <td>Good (Mobile Dependent)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Latency</strong></td>
+                            <td class="price">&lt; 15 ms</td>
+                            <td>40–100 ms</td>
+                            <td>20–50 ms</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Static IP</strong></td>
+                            <td class="price">Yes</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Concurrent Users</strong></td>
+                            <td class="price">Excellent (12+ stations)</td>
+                            <td>Poor (3–4 max)</td>
+                            <td>Good (6–8)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cost (Monthly)</strong></td>
+                            <td class="price">~RM 299</td>
+                            <td>~RM 99</td>
+                            <td>~RM 199</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 6. Conclusion -->
+        <section id="conclusion">
+            <h2><i class="fas fa-check-circle"></i> 6. Conclusion</h2>
+
+            <p>The proposed network design for <strong>ByteNexus Cyber Café</strong> effectively addresses all operational requirements specified within the 15' × 25' commercial constraints. By integrating a centralized Star topology using robust Cat6 UTP cabling, structured Class C IP allocation with VLSM segmentation, enterprise-grade Cisco and Ubiquiti networking equipment, and Unifi Business Fibre internet access, the business is guaranteed a:</p>
+
+            <ul class="feature-list">
+                <li><strong>Scalable Network Architecture:</strong> Star topology supports future expansion with minimal reconfiguration</li>
+                <li><strong>Reliable & Redundant Infrastructure:</strong> UPS-backed critical systems ensure uptime even during power interruptions</li>
+                <li><strong>High-Performance Gaming Environment:</strong> Sub-15ms latency and 1Gbps LAN speeds suitable for competitive play</li>
+                <li><strong>Professional Management:</strong> DHCP pools, static infrastructure IPs, and managed switching for easy administration</li>
+                <li><strong>Security-First Design:</strong> Firewall, URL filtering, VLAN segmentation, and monitored access control</li>
+                <li><strong>Cost-Effective Operations:</strong> Total startup of RM 64,800 with sustainable monthly operating costs</li>
+            </ul>
+
+            <p class="conclusion-highlight">This foundational network design meets all structural, financial, technical, and operational standards, presenting a <strong>viable, professional business proposal ready for immediate deployment</strong>. The integration of modern networking standards, enterprise-grade hardware, and strategic internet selection ensures ByteNexus can compete effectively in the cybercafé market while maintaining operational excellence and customer satisfaction.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>ByteNexus Cyber Café</h3>
+            <p><strong>Data Communication & Networking Project (BITS 1313)</strong></p>
+            <p>Semester II, Session 2025/2026</p>
+            <p class="submission-date">
+                <strong>Group Project Submission:</strong> Saturday, 9 June 2026 before 11:50 PM
+            </p>
+            <p class="footer-copyright">
+                © 2026 ByteNexus Cyber Café. All rights reserved. | Project for Educational Purposes
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add print functionality
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>
