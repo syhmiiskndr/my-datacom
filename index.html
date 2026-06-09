@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="ByteNexus Cyber Café - Next-Gen Digital Environment in Durian Tunggal, Melaka">
+    <meta name="theme-color" content="#06060c">
     <title>ByteNexus Cyber Café | Next-Gen Digital Environment</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
@@ -10,17 +12,24 @@
 <body>
 
     <header>
-        <div class="logo">BYTENEXUS</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#target">Who We Are For</a></li>
-                <li><a href="#location">Location</a></li>
-            </ul>
-        </nav>
-        <a href="#location" class="cta-btn small-btn">Visit Us</a>
+        <div class="header-container">
+            <div class="logo">BYTENEXUS</div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#target">Who We Are For</a></li>
+                    <li><a href="#location">Location</a></li>
+                </ul>
+            </nav>
+            <a href="#location" class="cta-btn small-btn">Visit Us</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
     <section id="home" class="hero-section">
@@ -64,7 +73,7 @@
                 <div class="service-box">
                     <div class="icon-indicator node-compute"></div>
                     <h3>High-Performance Stations</h3>
-                    <p>Systematically designed space accommodating up to 30 top-tier computers catering flawlessly to gaming, streaming, and intense workloads.</p>
+                    <p>Systematically designed space accommodating up to 10 top-tier computers catering flawlessly to gaming, streaming, and intense workloads.</p>
                 </div>
                 <div class="service-box">
                     <div class="icon-indicator node-tools"></div>
@@ -122,5 +131,6 @@
         <p>&copy; 2026 ByteNexus Cyber Café. All Rights Reserved. Elevating digital ecosystems.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
